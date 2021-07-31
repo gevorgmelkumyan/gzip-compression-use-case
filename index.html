@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="prism.css">
+    <title>GZIP</title>
+</head>
+<body style="background-color: antiquewhite">
+
+    <h1 class="text-center">HELLO WORLD IN DIFFERENT LANGUAGES</h1>
+    <div class="container mt-5 mb-2">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h2>Assembly x86</h2>
+                <pre><code class="language-asm6502">
+                    section .text
+                        global _start
+
+                    section .data
+                    msg db  'Hello, world!!!', 0xa
+                    len equ $ - msg
+
+                    section .text
+
+                    _start:
+
+                    mov edx, len
+                    mov ecx, msg
+                    mov ebx, 1
+                    mov eax, 4
+                    int 0x80
+
+                    mov ebx, 0
+                    mov eax, 1
+                    int 0x80
+                </code></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h2>C++</h2>
+                <pre><code class="language-cpp">
+                    #include &lt;iostream&gt;
+
+                    using namespace std;
+
+                    int main() {
+                        cout &lt;&lt; "Hello, world!!!" &lt;&lt; endl;
+                    }
+                </code></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h2>PHP</h2>
+                <pre><code class="language-php">
+                    &lt;?php
+                        echo "Hello, world!!!" . PHP_EOL;
+                    ?&gt;
+                </code></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h2>JavaScript</h2>
+                <pre><code class="language-js">
+                    console.log("Hello, world!!!")
+                </code></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>SQL</h2>
+                <pre><code class="language-sql">
+                    SELECT "Hello, world!!!" as message;
+                </code></pre>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap.js"></script>
+    <script src="prism.js"></script>
+</body>
+</html>
